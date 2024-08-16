@@ -10,7 +10,7 @@ set $right l
 set $right_alt period
 
 set $term kitty
-set $browser qutebrowser
+set $browser thorium-browser
 set $note obsidian --enable-features=UseOzonePlatform --ozone-platform=wayland --gtk-version=4
 
 set $menu bemenu-run --binding vim --ignorecase --list 10 --prompt "➾" --prefix "↳" --border 1 --fn "JetBrainsMono Nerd Font 12" --counter always --tb '#000000' --tf '#00a8ff' --fb '#000000' --ff '#00a8ff' --nb '#000000' --nf '#00a8ff' --hb '#333333' --hf '#00a8ff' --fbb '#000000' --fbf '#00a8ff' --sb '#00a8ff' --sf '#000000' --ab '#111111' --af '#00a8ff' --scb '#666666' --scf '#00a8ff' --bdr '#3333ff' -W 0.5 -M 0 --scrollbar autohide
@@ -39,7 +39,7 @@ output HDMI-A-1 {
 
 output DP-1 {
 # resolution 1920x1080@75Hz
-    resolution 1920x1080@60Hz
+        resolution 1920x1080@60Hz
         position 0 0
         adaptive_sync on
 }
