@@ -22,9 +22,9 @@ exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
 exec --no-startup-id autotiling-rs
 
 ### Output configuration
-output * background /home/eeay/vault/pictures/202531_original_3240x5760_1721992735.jpg fill
+output * background #000000 solid_color
 output eDP-1 {
-        resolution 1920x1080@60Hz
+        # resolution 1920x1080@60Hz
         position 3840 0
         adaptive_sync on
 }
@@ -32,14 +32,14 @@ output eDP-1 {
 
 output HDMI-A-1 {
     # resolution 1920x1080@100Hz
-        resolution 1920x1080@60Hz
+        # resolution 1920x1080@60Hz
         position 1920 0
         adaptive_sync on
 }
 
 output DP-1 {
 # resolution 1920x1080@75Hz
-        resolution 1920x1080@60Hz
+        # resolution 1920x1080@60Hz
         position 0 0
         adaptive_sync on
 }
