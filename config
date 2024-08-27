@@ -166,9 +166,8 @@ mode "resize" {
 bindsym $mod+r mode "resize"
 
 bar {
-    swaybar_command waybar
+    status_command while date +'%d-%m-%Y %X'; do sleep 1; done
     mode hide
-    id bar1
 }
 
 
