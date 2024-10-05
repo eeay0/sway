@@ -1,6 +1,6 @@
 xwayland disable
 
-### Variables
+### Variables 
 set $mod Mod4
 set $left h
 set $left_alt comma
@@ -27,6 +27,7 @@ output eDP-1 {
         resolution 1920x1080@60Hz
         position 3840 0
         adaptive_sync on
+	disable
 }
 
 
@@ -47,10 +48,10 @@ output DP-1 {
 
 
 ### Idle configuration
-exec swayidle -w \
-         timeout 300 'swaylock -f -c 000000' \
-         timeout 600 'swaymsg "output * power off"' resume 'swaymsg "output * power on"' \
-         before-sleep 'swaylock -f -c 000000'
+# exec swayidle -w \
+#          timeout 300 'swaylock -f -c 000000' \
+#          timeout 600 'swaymsg "output * power off"' resume 'swaymsg "output * power on"' \
+#          before-sleep 'swaylock -f -c 000000'
 
 ### Input configuration
 input 1133:49983:Logitech_G815_RGB_MECHANICAL_GAMING_KEYBOARD {
@@ -86,6 +87,11 @@ bindsym $mod+$down focus down
 bindsym $mod+$up focus up
 bindsym $mod+$right focus right
 
+bindsym $mod+left focus left
+bindsym $mod+down focus down
+bindsym $mod+up focus up
+bindsym $mod+right focus right
+
 bindsym $mod+$left_alt focus output left
 bindsym $mod+$right_alt focus output right
 
@@ -93,6 +99,11 @@ bindsym $mod+Shift+$left move left
 bindsym $mod+Shift+$down move down
 bindsym $mod+Shift+$up move up
 bindsym $mod+Shift+$right move right
+
+bindsym $mod+Shift+left move left
+bindsym $mod+Shift+down move down
+bindsym $mod+Shift+up move up
+bindsym $mod+Shift+right move right
 
 bindsym $mod+Shift+$left_alt move output left
 bindsym $mod+Shift+$right_alt move output right
@@ -108,10 +119,6 @@ bindsym $mod+7 workspace number 7
 bindsym $mod+8 workspace number 8
 bindsym $mod+9 workspace number 9
 bindsym $mod+0 workspace number 10
-workspace 1 output HDMI-A-1
-workspace 2 output HDMI-A-1
-workspace 3 output HDMI-A-1
-workspace 4 output HDMI-A-1
 bindsym $mod+Shift+1 move container to workspace number 1
 bindsym $mod+Shift+2 move container to workspace number 2
 bindsym $mod+Shift+3 move container to workspace number 3
@@ -151,6 +158,8 @@ bindsym XF86AudioPlay exec --no-startup-id playerctl play-pause
 bindsym XF86AudioNext exec --no-startup-id playerctl next
 bindsym XF86AudioPrev exec --no-startup-id playerctl previous
 bindsym $mod+shift+s exec --no-startup-id spotify --enable-features=UseOzonePlatform --ozone-platform=wayland
+bindsym $mod+m output "eDP-1" toggle
+
 #
 # Resizing containers:
 #
